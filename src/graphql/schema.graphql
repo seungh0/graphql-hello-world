@@ -1,0 +1,9 @@
+type Will {
+    name: String!,
+    age: Int!,
+    gender: String!
+}
+
+type Query {
+    person: Will! # required
+}
