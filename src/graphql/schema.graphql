@@ -1,9 +1,11 @@
-type Will {
+type Person {
+    id: Int!,
     name: String!,
     age: Int!,
     gender: String!
 }
 
 type Query {
-    person: Will! # required
+    people: [Person]!, # required
+    person(id: Int!): Person
 }
