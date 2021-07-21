@@ -7,9 +7,19 @@ type Movie {
 type Query {
   movies: [Movie]! # required
   movie(id: Int!): Movie
+
+  stories(limit: Int!, rating: Float): [Story]!
 }
 
 type Mutation {
   addMovie(name: String!, score: Int!): Movie!
   deleteMovie(id: Int!): Boolean!
+}
+
+type Story {
+  id: Int!
+  title: String!
+  rating: Float!
+  summary: String
+  language: String
 }
